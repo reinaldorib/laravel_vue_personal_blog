@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
         <link href="https://getbootstrap.com/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet">
         
-        @vite(['resources/js/app.js'])
+        @vite(['resources/js/app.js','resources/css/app.css'])
         
     </head>
     <body>

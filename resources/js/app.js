@@ -4,6 +4,8 @@ import './bootstrap';
 import { createApp } from 'vue';
 import { createRouter, createWebHistory } from 'vue-router';
 
+// import Layout from './components/Layout/Layout.vue';
+
 import App from './components/App.vue';
 
 import Post from './components/Posts.vue';
@@ -16,8 +18,9 @@ import LoginInfo from './components/Login.vue';
 const router = createRouter({
     history: createWebHistory(),
     routes: [
-        { path: '/', component: App },
-        { path: '/posts', component: PostList },
+        // { path: '/', component: Layout },
+        // { path: '/', component: App },
+        { path: '/', component: PostList },
         { path: '/posts/create', component: PostForm },
         { path: '/posts/:id', component: Post },
         { path: '/posts/:id/edit', component: PostForm },

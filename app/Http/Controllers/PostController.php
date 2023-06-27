@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
+
+use Illuminate\Support\Facades\Auth;
+
 class PostController extends Controller
 {
     //
@@ -31,12 +34,12 @@ class PostController extends Controller
     public function store(Request $request)
     {
         //
+        $usuario = Auth::user()->id;
         $request->validate([
             'title' => 'required',
             'body' => 'required',
             // 'price' => 'required'
         ]);
-
         return Post::create($request->all());
     }
 

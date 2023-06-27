@@ -26,10 +26,11 @@
         post: {
           title: '',
           body: '',
-          
+          user_id:'',
         }
       }
     },
+    
     computed: {
       isNewPost() {
         return !this.$route.path.includes('edit');

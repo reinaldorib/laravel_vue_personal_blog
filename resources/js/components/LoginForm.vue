@@ -35,10 +35,12 @@ export default {
     async submitForm() {
       try {
         await axios.post('/api/auth', this.user);
-        alert("funcionou");
+        console.log('funcionou');
+        // alert("funcionou");
       } catch (error) {
         console.error(error);
-        alert("falhou");
+        console.log('falhou');
+        // alert("falhou");
       }
       this.$router.push('/')
     }

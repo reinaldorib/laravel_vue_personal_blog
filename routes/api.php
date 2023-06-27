@@ -6,6 +6,8 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
 
+use App\Http\Controllers\AuthController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -21,7 +23,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::resource('posts', PostController::class);
+Route::resource('posts', PostController::class)->middleware('auth');
 Route::resource('registros', UserController::class);
 Route::post('/auth',[LoginController::class,'login']);
 Route::get('/logado',[LoginController::class,'logado']);

@@ -1,0 +1,21 @@
+.test_color{
+    background-color: #00FF00;
+}
+
+.test_color_text{
+    color: #00FF00;
+}
+
+/* a{
+    color: #19a719;
+} */
+
+
+body{
+    color: rgb(240, 20, 20);
+    &__router-link{
+        
+        color: rgb(240, 20, 20);
+    }
+  
+}

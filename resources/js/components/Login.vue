@@ -31,8 +31,8 @@ import axios from 'axios';
         this.user = res.data;
         console.log(this.user);
         
-      }catch(err){
-        console.log(err);
+      }catch(error){
+        console.log(error);
       }
     }
   }
