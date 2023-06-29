@@ -39,6 +39,7 @@ export default {
     try {
       const response = await axios.get('/api/posts');
       this.posts = response.data;
+      console.log(response.data);
     } catch (error) {
       console.error(error);
     }

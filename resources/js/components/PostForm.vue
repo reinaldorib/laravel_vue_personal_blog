@@ -26,7 +26,6 @@
         post: {
           title: '',
           body: '',
-          user_id:'',
         }
       }
     },
@@ -40,6 +39,7 @@
       if (!this.isNewPost) {
         const response = await axios.get(`/api/posts/${this.$route.params.id}`);
         this.post = response.data;
+        console.log(response.data);
       }
     },
     methods: {

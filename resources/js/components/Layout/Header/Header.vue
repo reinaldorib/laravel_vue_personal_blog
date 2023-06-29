@@ -10,7 +10,7 @@
             <router-link to="/registros/create"> Add user</router-link>&nbsp;
             <router-link to="/logininfo">   login info</router-link>&nbsp;
 
-            <router-link to="/" v-if="user.name" @click.prevent="logout"><a class="test_color_text">logout {{ user.name }}</a> </router-link>&nbsp;
+            <router-link to="/" v-if="user.name" :key="user.name" @click.prevent="logout"><a class="test_color_text">logout {{ user.name }}</a> </router-link>&nbsp;
             <router-link to="/loginuser" :key="user" v-else> <a class="test_color_text">login</a>  </router-link>&nbsp;
     </header>
 </template>
@@ -20,14 +20,6 @@
   import { ref } from 'vue'
   export default {
     name: 'Header',
-    // setup(){
-    //   const user = reactive({
-    //     email:'',
-    //       id:'',
-    //       name:'',
-    //   })
-    //   return{user}
-    // },
     data(){
       return{
         user:{
@@ -39,21 +31,6 @@
     },
 
     mounted () {
-      // // axios
-      // //   .get('/api/logado')
-      // //   .then(response => (this.user = response.data))
-      // try{
-      //   const res = await axios.get('/api/logado');
-      //   this.user.name = res.data.name;
-      //   this.user.email = res.data.email;
-      //   this.user.id = res.data.id;
-      //   console.log(res);
-        
-      // }catch(error){
-      //   console.log('Ainda não há usuários logados');
-      //   console.log(error);
-      // }
-      
       this.alguma();
     },
 
@@ -93,18 +70,5 @@
 
     
 
-    // async created () {
-    //   // axios
-    //   //   .get('/api/logado')
-    //   //   .then(response => (this.user = response.data))
-    //   try{
-    //     const res = await axios.get('/api/logado');
-    //     console.log(res);
-    //     this.user.name = res.data.name;
-    //   }catch(error){
-    //     console.log('Ainda não há usuários logados');
-    //     console.log(error);
-    //   }
-    // },
   }
 </script>
