@@ -1,5 +1,5 @@
 Até o momento:
 insere e autentica usuario.
 
-estou ligando as tabelas e por esse motivo ainda não grava os posts com a chave estrangeira, mas se misso o crud de posts funciona.
+Posts adicionados com chave estrangeira ligado ao id do usuario logado no momento da postagem
 
